@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="FunnyWaterCarrier.Views.Order"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FunnyWaterCarrier.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="420" d:DesignWidth="1000">
+    <GroupBox Header="Заказы" Height="400" Width="950">
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button Command="{Binding Accept}" Content="Принять" HorizontalAlignment="Left" Height="30" Margin="800,200,0,0" VerticalAlignment="Top" Width="100"/>
+            <DataGrid ItemsSource="{Binding Orders}"
+                      SelectionMode="Single" SelectedItem="{Binding Input}"
+                      AutoGenerateColumns="False" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Width="750" Height="310">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Number}" Header="Номер" Width="200"/>
+                    <DataGridTextColumn Binding="{Binding Partner}" Header="Партнер" Width="250"/>
+                    <DataGridTextColumn Binding="{Binding Path = Employee.Name}" Header="Сотрудник" Width="200"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Command="{Binding Change}" Content="Изменить" HorizontalAlignment="Left" Height="30" Margin="800,140,0,0" VerticalAlignment="Top" Width="100"/>
+        </Grid>
+    </GroupBox>
+</UserControl>

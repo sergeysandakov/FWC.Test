@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="FunnyWaterCarrier.Views.AddDepartament"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FunnyWaterCarrier.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="420" d:DesignWidth="800">
+    <GroupBox Header="Подразделение" Height="350" Width="500">
+        <Grid>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="20,40,0,0" TextWrapping="Wrap" Text="Наименование" VerticalAlignment="Top" Width="100"/>
+            <TextBox HorizontalAlignment="Left" Height="30" Margin="150,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Text="{Binding DepartamentName}"/>
+            <Button Command="{Binding Accept}" Content="Принять" HorizontalAlignment="Left" Height="40" Margin="125,250,0,0" VerticalAlignment="Top" Width="90"/>
+            <Button Command="{Binding Decline}" Content="Отмена" HorizontalAlignment="Left" Height="40" Margin="275,250,0,0" VerticalAlignment="Top" Width="90"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="20,80,0,0" TextWrapping="Wrap" Text="Руководитель" VerticalAlignment="Top" Width="100"/>
+            <ComboBox SelectedValue="{Binding DepartamentLeader}"
+                      ItemsSource="{Binding Employees}"
+                      IsSynchronizedWithCurrentItem="True"
+                      HorizontalAlignment="Left" Height="30" Margin="150,80,0,0" VerticalAlignment="Top" Width="200">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding Surname}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+
+        </Grid>
+    </GroupBox>
+</UserControl>

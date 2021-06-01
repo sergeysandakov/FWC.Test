@@ -1,0 +1,48 @@
+﻿<Application x:Class="FunnyWaterCarrier.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FunnyWaterCarrier"
+             xmlns:view="clr-namespace:FunnyWaterCarrier.Views"  
+             xmlns:viewmodel="clr-namespace:FunnyWaterCarrier.ViewModels"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <DataTemplate DataType="{x:Type viewmodel:AddDepartamentViewModel}">
+                <view:AddDepartament HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:AddEmployeeModel}">
+                <view:AddEmployee HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:AddOrderViewModel}">
+                <view:AddOrder HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:DepartamentViewModel}">
+                <view:Departament HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:EmployeeViewModel}">
+                <view:Employee HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:OrderViewModel}">
+                <view:Order HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:MainViewModel}">
+                <view:MainView HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </DataTemplate>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

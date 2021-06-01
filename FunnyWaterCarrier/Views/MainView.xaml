@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="FunnyWaterCarrier.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FunnyWaterCarrier.Views" Height="420" Width="1000">
+    
+    <GroupBox Header="Главная" Height="400" Width="950">
+        <Grid Background="White">
+            <TextBlock HorizontalAlignment="Left" Text="Сотрудники" Margin="95 50 0 0" FontWeight="Bold" Height="40" FontSize="19" VerticalAlignment="Top" Width="150" />
+            <TextBlock HorizontalAlignment="Left" Text="Подразделения" Margin="380 50 0 0" FontWeight="Bold" Height="40" FontSize="19" VerticalAlignment="Top" Width="150" />
+            <TextBlock HorizontalAlignment="Left" Text="Заказы" Margin="700 50 0 0" FontWeight="Bold" Height="40" FontSize="19" VerticalAlignment="Top" Width="150" />
+            <Button Command="{Binding AddEmployee}" Content="Создать" HorizontalAlignment="Left" Height="30" Margin="70 130 0 0" VerticalAlignment="Top" Width="200"/>
+            <Button Command="{Binding AddDepartament}" Content="Создать" HorizontalAlignment="Left" Height="30" Margin="360 130 0 0" VerticalAlignment="Top" Width="200"/>
+            <Button Command="{Binding AddOrder}" Content="Создать" HorizontalAlignment="Left" Height="30" Margin="650 130 0 0" VerticalAlignment="Top" Width="200"/>
+            <Button Command="{Binding ShowEmployee}" Content="Показать/Редактировать" HorizontalAlignment="Left" Height="30" Margin="70 230 0 0" VerticalAlignment="Top" Width="200"/>
+            <Button Command="{Binding ShowDepartament}" Content="Показать/Редактировать" HorizontalAlignment="Left" Height="30" Margin="360 230 0 0" VerticalAlignment="Top" Width="200"/>
+            <Button Command="{Binding ShowOrder}" Content="Показать/Редактировать" HorizontalAlignment="Left" Height="30" Margin="650 230 0 0" VerticalAlignment="Top" Width="200"/>
+
+        </Grid>
+    </GroupBox>
+</UserControl>
